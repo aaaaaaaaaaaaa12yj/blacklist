@@ -1,26 +1,4 @@
-for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
-    if plr ~= game:GetService("Players").LocalPlayer then
-        if plr.Character:FindFirstChild("HumanoidRootPart") then
-            plr.Character.HumanoidRootPart:Destroy()
-        end
-        
-        plr.CharacterAdded:Connect(function(char)
-            wait()
-            if char:FindFirstChild("HumanoidRootPart") then
-                char.HumanoidRootPart:Destroy()
-            end
-        end)
-    end
-end
 
-game:GetService("Players").PlayerAdded:Connect(function(plr)
-    plr.CharacterAdded:Connect(function(char)
-        wait()
-        if char:FindFirstChild("HumanoidRootPart") then
-            char.HumanoidRootPart:Destroy()
-        end
-    end)
-end)
 game:GetService("Players").LocalPlayer.Character.RedBeanieWithHair.Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character['WDW_FoamFinger'].Handle.SpecialMesh:Destroy()
 game:GetService("Players").LocalPlayer.Character['Hat1'].Handle.Mesh:Destroy()
